@@ -1,14 +1,10 @@
-package com.deckard.controllers;
+package com.deckard.helloboot.controllers;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 public class HelloController {
@@ -18,7 +14,7 @@ public class HelloController {
         return String.valueOf(n);
     }
 
-    @RequestMapping("/newFriend")
+    @RequestMapping("/newfriend")
     public String addNewFriend(@RequestParam("name") String name) {
         //insertNewFriendToDb(name);
         return "New friend added";
@@ -62,7 +58,7 @@ public class HelloController {
     private Connection getDbConnection() {
         Connection mariaDbConnection = null;
         try {
-            mariaDbConnection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/people?user=root&password=charade");
+            mariaDbConnection = DriverManager.getConnection("j  dbc:mariadb://localhost:3306/people?user=root&password=charade");
         } catch (SQLException e) {
             e.printStackTrace();
         }
