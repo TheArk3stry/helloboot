@@ -20,11 +20,11 @@ public class HelloController {
 
     @RequestMapping("/newFriend")
     public String addNewFriend(@RequestParam("name") String name) {
-        insertNewFriendToDb(name);
+        //insertNewFriendToDb(name);
         return "New friend added";
     }
 
-    @RequestMapping("/myFriends")
+    @RequestMapping("/myfriends")
     public String getMyFriends() {
         return getFriendsFromDb();
     }
