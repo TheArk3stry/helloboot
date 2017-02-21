@@ -1,5 +1,5 @@
 #Use openjdk-8 image tu run
-FROM openjdk:7-jdk-alpine
+FROM openjdk:8-jdk-alpine
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 #Use port 8080
